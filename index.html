@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Voges - macOS Platform Architect</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // FOUC prevention: apply saved theme before first paint
+        (function() {
+            var theme = localStorage.getItem('theme');
+            if (!theme) {
+                theme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+            }
+            document.documentElement.setAttribute('data-theme', theme);
+        })();
+    </script>
+</head>
+<body>
+    <div class="layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-content">
+                <div class="profile-photo-wrapper">
+                    <img src="assets/headshot.jpg" alt="Aaron Voges" class="profile-photo">
+                    <div class="sunglasses-overlay" aria-hidden="true">
+                        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Bridge -->
+                            <path d="M 78 38 Q 100 30 122 38" fill="none" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+                            <!-- Left lens -->
+                            <path d="M 18 32 Q 16 20 38 18 Q 62 16 76 22 Q 82 26 80 38 Q 78 56 58 58 Q 32 60 20 50 Q 14 44 18 32 Z" fill="#1a1a1a"/>
+                            <!-- Right lens -->
+                            <path d="M 120 22 Q 138 16 162 18 Q 184 20 182 32 Q 186 44 180 50 Q 168 60 142 58 Q 122 56 120 38 Q 118 26 120 22 Z" fill="#1a1a1a"/>
+                            <!-- Left temple -->
+                            <path d="M 18 34 L 2 28" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+                            <!-- Right temple -->
+                            <path d="M 182 34 L 198 28" stroke="#1a1a1a" stroke-width="4" stroke-linecap="round"/>
+                            <!-- Lens shine - left -->
+                            <ellipse cx="48" cy="34" rx="14" ry="8" fill="rgba(255,255,255,0.08)" transform="rotate(-10 48 34)"/>
+                            <!-- Lens shine - right -->
+                            <ellipse cx="152" cy="34" rx="14" ry="8" fill="rgba(255,255,255,0.08)" transform="rotate(-10 152 34)"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <h1 class="name">Aaron Voges</h1>
+                <p class="title">macOS Platform Architect</p>
+
+                <div class="contact-links">
+                    <a href="mailto:avoges@gmail.com" class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+                        avoges@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/avoges" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+                        linkedin.com/in/avoges
+                    </a>
+                    <span class="contact-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Katy, Texas
+                    </span>
+                </div>
+
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <!-- About -->
+            <section class="section" id="about">
+                <h2 class="section-title">About</h2>
+                <p>If you need enterprise macOS built right &mdash; from zero-touch provisioning to zero trust &mdash; that's what I do.</p>
+                <p>I'm a macOS Platform Architect with 20+ years designing, automating, and scaling Apple endpoint environments at organizations like MD Anderson Cancer Center (5,000+ Macs, 26,000+ Windows endpoints) and ExxonMobil. I specialize in the full device lifecycle: procurement to decommission, with heavy emphasis on automation, security compliance, and seamless end-user experience.</p>
+                <p>Eagle Scout. Scoutmaster, BSA Troop 584.</p>
+            </section>
+
+            <!-- Experience -->
+            <section class="section" id="experience">
+                <h2 class="section-title">Experience</h2>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>ExxonMobil</h3>
+                        <span class="exp-date">Sep 2025 &ndash; Present</span>
+                    </div>
+                    <p class="exp-role">Principal macOS Platform Architect</p>
+                    <p class="exp-location">Spring, Texas</p>
+                    <p class="exp-summary">Sole architect for ExxonMobil's enterprise macOS platform &mdash; architected to scale to 10,000+ endpoints, building the full MDM and management stack on Microsoft Intune at a 90,000-employee energy supermajor.</p>
+                    <div class="exp-details">
+                        <h4>Platform Architecture</h4>
+                        <ul>
+                            <li>Architected full macOS device lifecycle on Intune &amp; Apple Business Manager &mdash; enrollment, compliance, configuration profiles, OS patching, and decommission</li>
+                            <li>Implemented Entra Platform SSO with Secure Enclave-backed credentials, SCEP certificates, and 802.1X network authentication</li>
+                            <li>Integrated macOS into Zero Trust architecture spanning iBoss, Appgate SDP, and Infoblox &mdash; conditional access, compliance enforcement, and network segmentation</li>
+                            <li>Leveraged Platform SSO Kerberos TGT to automate file share mapping across reboots and network transitions</li>
+                        </ul>
+                        <h4>Automation &amp; Delivery</h4>
+                        <ul>
+                            <li>Engineered zero-touch provisioning pipeline (Swift Dialog + Azure Blob Storage) &mdash; unbox-to-productive in under 10 minutes with zero IT touch</li>
+                            <li>Author and maintain bash/zsh automation for deployment, compliance, patching, and platform operations</li>
+                            <li>Package and deploy enterprise applications via Intune app delivery workflows</li>
+                        </ul>
+                        <h4>Key Achievements</h4>
+                        <ul>
+                            <li>Built ExxonMobil's macOS platform from the ground up &mdash; zero-touch provisioning, compliance, enterprise auth, and software delivery where none existed at scale</li>
+                            <li>Diagnosed and escalated a multi-vendor Platform SSO / Kerberos regression undetected by Apple and Microsoft &mdash; currently under active joint investigation by both vendors</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>MD Anderson Cancer Center</h3>
+                        <span class="exp-date">Oct 2005 &ndash; Sep 2025</span>
+                    </div>
+                    <p class="exp-role">Senior Systems Analyst &ndash; macOS Platform Architect</p>
+                    <p class="exp-location">Houston, Texas</p>
+                    <p class="exp-summary">Led the architecture, automation, and lifecycle management for 5,000+ macOS endpoints using Jamf Pro, and administered 26,000+ Windows endpoints via Intune and Configuration Manager.</p>
+                    <div class="exp-details">
+                        <ul>
+                            <li>Engineered zero-touch onboarding, OS/app patching, and compliance enforcement, significantly reducing manual effort</li>
+                            <li>Deployed Jamf Connect with Entra ID; redeveloped workflows for true zero-touch provisioning &mdash; cutting provisioning time from hours to minutes</li>
+                            <li>Authored Bash, Python, and PowerShell scripts to extend MDM capabilities, automate patching, enforce compliance, and improve reporting</li>
+                            <li>Built Power Apps and Power Automate workflows integrating with Jamf, Intune, and Microsoft 365</li>
+                            <li>Managed on-premise Jamf Linux server clusters (Apache Tomcat, Nginx) behind F5 load balancers</li>
+                            <li>Served as top technical escalation point for macOS, collaborating with Apple, Microsoft, and Jamf</li>
+                            <li>Developed documentation and delivered training for 50+ analysts on macOS support practices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Analysts International</h3>
+                        <span class="exp-date">Jun 2004 &ndash; Oct 2005</span>
+                    </div>
+                    <p class="exp-role">Apple Field Service Engineer / PC &amp; Mac Consultant</p>
+                    <p class="exp-location">Houston, Texas</p>
+                    <p class="exp-summary">Provided onsite Apple hardware repair and technical consulting for multiple Texas school districts and small business clients.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Apple</h3>
+                        <span class="exp-date">Oct 2002 &ndash; Jun 2004</span>
+                    </div>
+                    <p class="exp-role">AppleCare Enterprise Server Technical Support</p>
+                    <p class="exp-location">Austin, Texas</p>
+                    <p class="exp-summary">Advanced technical support for Apple's enterprise server products. Promoted from Education support to Tier 2, selected for the iTunes Music Store launch project, then promoted to Enterprise support.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>S1 Corporation</h3>
+                        <span class="exp-date">Feb 2000 &ndash; Sep 2002</span>
+                    </div>
+                    <p class="exp-role">Level 2 Support Engineer</p>
+                    <p class="exp-location">Austin, Texas</p>
+                    <p class="exp-summary">Remote Level 2 technical support for S1's banking software solutions on Windows NT/2000 platforms.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>Dell Technologies</h3>
+                        <span class="exp-date">Jan 1999 &ndash; Jan 2000</span>
+                    </div>
+                    <p class="exp-role">Major Accounts Senior Technician</p>
+                    <p class="exp-location">Round Rock, Texas</p>
+                    <p class="exp-summary">Component-level hardware and software support for Dell's large corporate clients. Premier Access certified across all product lines.</p>
+                </div>
+
+                <div class="experience-item">
+                    <div class="exp-header">
+                        <h3>AT&amp;T Wireless PCS LLC</h3>
+                        <span class="exp-date">Jun 1998 &ndash; Jan 1999</span>
+                    </div>
+                    <p class="exp-role">Call Center Support Representative</p>
+                    <p class="exp-location">Austin, Texas</p>
+                    <p class="exp-summary">Second-level support for AT&amp;T's CBIS billing system. Achieved Gold Club award for customer service excellence.</p>
+                </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="section" id="skills">
+                <h2 class="section-title">Skills</h2>
+                <div class="tags">
+                    <span class="tag">Jamf Pro</span>
+                    <span class="tag">Microsoft Intune</span>
+                    <span class="tag">Entra ID</span>
+                    <span class="tag">Platform SSO</span>
+                    <span class="tag">Zero Trust</span>
+                    <span class="tag">Bash</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">PowerShell</span>
+                    <span class="tag">Apple Business Manager</span>
+                    <span class="tag">SCCM</span>
+                    <span class="tag">Power Platform</span>
+                    <span class="tag">AI / Machine Learning</span>
+                    <span class="tag">Zero-Touch Provisioning</span>
+                    <span class="tag">F5 BIG-IP</span>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="section" id="certifications">
+                <h2 class="section-title">Certifications</h2>
+                <div class="tags">
+                    <span class="tag">Jamf Certified Expert &ndash; Jamf Pro (400)</span>
+                    <span class="tag">MCITP: Enterprise Administrator</span>
+                    <span class="tag">Apple Certified Technical Coordinator</span>
+                    <span class="tag">ITIL v3 Foundation</span>
+                    <span class="tag">CCNA</span>
+                    <span class="tag">F5 BIG-IP</span>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="section" id="education">
+                <h2 class="section-title">Education</h2>
+
+                <div class="education-item">
+                    <div class="exp-header">
+                        <h3>Western Governors University</h3>
+                        <span class="exp-date">2024</span>
+                    </div>
+                    <p class="exp-role">Master of Science &ndash; Information Technology Management</p>
+                </div>
+
+                <div class="education-item">
+                    <div class="exp-header">
+                        <h3>Texas A&amp;M University-Commerce</h3>
+                    </div>
+                    <p class="exp-role">Bachelor of Applied Arts and Sciences &ndash; Organizational Leadership</p>
+                </div>
+
+                <div class="education-item">
+                    <div class="exp-header">
+                        <h3>Pierpont Community and Technical College</h3>
+                    </div>
+                    <p class="exp-role">Associate of Applied Science &ndash; Business</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
