@@ -24,20 +24,44 @@
                 <div class="profile-photo-wrapper">
                     <img src="assets/headshot.jpg" alt="Aaron Voges" class="profile-photo">
                     <div class="sunglasses-overlay" aria-hidden="true">
-                        <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg">
+                        <svg viewBox="0 0 220 90" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <!-- Lens gradient for realism -->
+                                <linearGradient id="lensGrad" x1="0" y1="0" x2="0.3" y2="1">
+                                    <stop offset="0%" stop-color="#4a3728"/>
+                                    <stop offset="35%" stop-color="#2a1f14"/>
+                                    <stop offset="100%" stop-color="#1a1209"/>
+                                </linearGradient>
+                                <!-- Lens reflection -->
+                                <linearGradient id="lensShine" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="rgba(255,255,255,0.18)"/>
+                                    <stop offset="50%" stop-color="rgba(255,255,255,0)"/>
+                                    <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Frame - top bar -->
+                            <path d="M 16 30 Q 16 22 24 22 L 86 20 Q 92 20 92 26" fill="#2c2c2c" stroke="#1a1a1a" stroke-width="1"/>
+                            <path d="M 128 26 Q 128 20 134 20 L 196 22 Q 204 22 204 30" fill="#2c2c2c" stroke="#1a1a1a" stroke-width="1"/>
                             <!-- Bridge -->
-                            <path d="M 82 35 Q 100 28 118 35" fill="none" stroke="#1a1a1a" stroke-width="3.5" stroke-linecap="round"/>
+                            <path d="M 92 26 Q 110 18 128 26" fill="none" stroke="#2c2c2c" stroke-width="4" stroke-linecap="round"/>
+                            <!-- Left lens frame -->
+                            <ellipse cx="56" cy="42" rx="42" ry="26" fill="#2c2c2c" stroke="#1a1a1a" stroke-width="1.5"/>
                             <!-- Left lens -->
-                            <ellipse cx="52" cy="40" rx="38" ry="22" fill="#1a1a1a"/>
+                            <ellipse cx="56" cy="42" rx="38" ry="22" fill="url(#lensGrad)"/>
+                            <ellipse cx="56" cy="42" rx="38" ry="22" fill="url(#lensShine)"/>
+                            <!-- Right lens frame -->
+                            <ellipse cx="164" cy="42" rx="42" ry="26" fill="#2c2c2c" stroke="#1a1a1a" stroke-width="1.5"/>
                             <!-- Right lens -->
-                            <ellipse cx="148" cy="40" rx="38" ry="22" fill="#1a1a1a"/>
-                            <!-- Left temple -->
-                            <path d="M 14 34 L 2 28" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
-                            <!-- Right temple -->
-                            <path d="M 186 34 L 198 28" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round"/>
-                            <!-- Lens shine -->
-                            <ellipse cx="42" cy="34" rx="10" ry="6" fill="rgba(255,255,255,0.08)" transform="rotate(-10 42 34)"/>
-                            <ellipse cx="138" cy="34" rx="10" ry="6" fill="rgba(255,255,255,0.08)" transform="rotate(-10 138 34)"/>
+                            <ellipse cx="164" cy="42" rx="38" ry="22" fill="url(#lensGrad)"/>
+                            <ellipse cx="164" cy="42" rx="38" ry="22" fill="url(#lensShine)"/>
+                            <!-- Left temple arm -->
+                            <path d="M 14 36 L 2 30" stroke="#2c2c2c" stroke-width="3.5" stroke-linecap="round"/>
+                            <!-- Right temple arm -->
+                            <path d="M 206 36 L 218 30" stroke="#2c2c2c" stroke-width="3.5" stroke-linecap="round"/>
+                            <!-- Highlight glare on left lens -->
+                            <ellipse cx="42" cy="34" rx="12" ry="7" fill="rgba(255,255,255,0.12)" transform="rotate(-15 42 34)"/>
+                            <!-- Highlight glare on right lens -->
+                            <ellipse cx="150" cy="34" rx="12" ry="7" fill="rgba(255,255,255,0.12)" transform="rotate(-15 150 34)"/>
                         </svg>
                     </div>
                 </div>
