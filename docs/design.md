@@ -38,7 +38,7 @@ Two-column CSS Grid (`300px` sidebar | `1fr` content area):
 ### Right Content Sections
 
 1. **About** - Summary paragraph
-2. **Experience** - 7 roles from ExxonMobil (current) through AT&T Wireless (1998). Detailed bullet points for ExxonMobil and MD Anderson; brief summaries for earlier roles.
+2. **Experience** - 7 roles from ExxonMobil (Contractor, current) through AT&T Wireless (1998). Detailed bullet points for ExxonMobil (Contractor) and MD Anderson; brief summaries for earlier roles.
 3. **Skills** - Tag pills (Jamf Pro, Intune, Entra ID, Zero Trust, Bash, Python, PowerShell, etc.)
 4. **Certifications** - Tag pills (MCITP-EA, ACTC, Jamf 400, ITIL v3, CCNA, F5 BIG-IP)
 5. **Education** - WGU MS (2024), Texas A&M Commerce BAAS, Pierpont AAS
